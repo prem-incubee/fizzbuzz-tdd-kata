@@ -48,4 +48,8 @@ describe("fizzBuzz test suite", () => {
   it('should return "Buzz" for input 25', () => {
     expect(fizzBuzz(25)).toBe("Buzz");
   });
+
+  it('should return "FizzBuzz" for input 15', () => {
+    expect(fizzBuzz(15)).toBe("FizzBuzz");
+  });
 });
