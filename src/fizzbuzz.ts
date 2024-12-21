@@ -1,3 +1,4 @@
-export default function fizzBuzz(num: number){
-    return num.toString()
+export default function fizzBuzz(num: number) {
+  if (num === 3) return "Fizz";
+  return num.toString();
 }
