@@ -12,4 +12,8 @@ describe('fizzBuzz test suite', () => {
     it('should return "4" for input 4', () => {
         expect(fizzBuzz(4)).toBe("4");
     });
+
+    it('should return "Fizz" for input 3', () => {
+        expect(fizzBuzz(3)).toBe("Fizz");
+    });
 });
