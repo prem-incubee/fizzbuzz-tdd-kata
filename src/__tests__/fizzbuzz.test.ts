@@ -36,4 +36,16 @@ describe("fizzBuzz test suite", () => {
   it('should return "Buzz" for input 5', () => {
     expect(fizzBuzz(5)).toBe("Buzz");
   });
+
+  it('should return "Buzz" for input 10', () => {
+    expect(fizzBuzz(10)).toBe("Buzz");
+  });
+
+  it('should return "Buzz" for input 20', () => {
+    expect(fizzBuzz(20)).toBe("Buzz");
+  });
+
+  it('should return "Buzz" for input 25', () => {
+    expect(fizzBuzz(25)).toBe("Buzz");
+  });
 });
