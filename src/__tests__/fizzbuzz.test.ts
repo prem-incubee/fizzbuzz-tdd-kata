@@ -1,4 +1,4 @@
-import fizzBuzz from "@/fizzbuzz";
+import fizzBuzz from "@/katas/fizzbuzz";
 
 describe("fizzBuzz test suite", () => {
   it('should return "1" for input 1', () => {
