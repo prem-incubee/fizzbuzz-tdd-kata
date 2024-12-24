@@ -1,4 +1,4 @@
-import fizzBuzz from "@/katas/fizzbuzz";
+import fizzBuzz from "@/katas/fizzBuzz";
 
 describe("fizzBuzz test suite", () => {
   it('should return "1" for input 1', () => {
@@ -28,7 +28,6 @@ describe("fizzBuzz test suite", () => {
   it('should return "Fizz" for input 12', () => {
     expect(fizzBuzz(12)).toBe("Fizz");
   });
-
 
   it('should return "Buzz" for input 5', () => {
     expect(fizzBuzz(5)).toBe("Buzz");
