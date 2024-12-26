@@ -1,4 +1,4 @@
-Incubyte **Test-Driven Development (TDD)** Kata
+Incubyte **Test-Driven Development (TDD)** Katas
 ================
 
 This repository contains katas from [**Codurance**](https://www.codurance.com/katas) practiced using TDD approach.
