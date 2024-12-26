@@ -13,7 +13,10 @@ describe("prime factors for a given natural number", () => {
     expect(factorsOf(3)).toEqual([3]);
   });
 
-  it.todo("prime factor of 4 should be list of 2,2");
+  it("prime factor of 4 should be list of 2,2", () => {
+    expect(factorsOf(4)).toEqual([2,2])
+  });
+
   it.todo("prime factor of 5 should be list of 5");
   it.todo("prime factor of 6 should be list of 2,3");
   it.todo("prime factor of 7 should be list of 7");
