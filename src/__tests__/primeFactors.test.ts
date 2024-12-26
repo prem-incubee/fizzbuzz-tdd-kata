@@ -37,4 +37,8 @@ describe("prime factors for a given natural number", () => {
     expect(factorsOf(9)).toEqual([3,3])
   });
 
+  it("prime factor of 2*2*3*3*3*5*7*11*11 should be list of 2,2,3,3,3,5,7,11,11", () => {
+    expect(factorsOf(2*2*3*3*3*5*7*11*11)).toEqual([2, 2, 3, 3, 3, 5, 7, 11, 11]);
+  });  
+
 });
