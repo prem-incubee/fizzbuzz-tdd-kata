@@ -39,8 +39,13 @@ describe("Leap year determination in isLeapYear", () => {
   });
 
 
-  it.todo("should return true for a leap year 1600");
-  it.todo("should return true for a leap year 2000");
+  it("should return true for a leap year 1600", () => {
+    expect(isLeapYear(1600)).toBe(true);
+  });
+
+  it("should return true for a leap year 2000", () => {
+    expect(isLeapYear(2000)).toBe(true);
+  });
 
   it.todo("should return false for a common year 1700");
   it.todo("should return false for a common year 1800");
