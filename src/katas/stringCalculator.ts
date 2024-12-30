@@ -5,8 +5,15 @@ export default function stringCalculator(listOfNumbers: string) {
   } else if (stringLength === 1) {
     return Number(listOfNumbers);
   } else {
-    const commaOrNewLineSeparators = /,|\n/
-    const sum = listOfNumbers.split(commaOrNewLineSeparators)
+    let customSeparators: RegExp | string = /,|\n/;
+
+    if (listOfNumbers.startsWith("//")) {
+      const splittedNumberList = listOfNumbers.split("\n");
+      customSeparators = splittedNumberList[0].slice(2);
+      listOfNumbers = splittedNumberList[1];
+    }
+    const sum = listOfNumbers
+      .split(customSeparators)
       .reduce(
         (previousValue: number, currentValue: string) =>
           previousValue + parseInt(currentValue),

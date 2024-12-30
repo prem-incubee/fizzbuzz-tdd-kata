@@ -21,4 +21,32 @@ describe("string calculator test suite", () => {
   it("returns 6 for input string 1\n2,3", () => {
     expect(stringCalculator("1\n2,3")).toBe(6);
   });
+
+  it("returns 3 for input string //;\n1;2", () => {
+    expect(stringCalculator("//;\n1;2")).toBe(3);
+  });
+
+  it("returns 3 for input string //?\n1?2", () => {
+    expect(stringCalculator("//?\n1?2")).toBe(3);
+  });
+
+  it("returns 3 for input string //[\n1[2", () => {
+    expect(stringCalculator("//[\n1[2")).toBe(3);
+  });
+
+  it("returns 3 for input string //^\n1^2", () => {
+    expect(stringCalculator("//^\n1^2")).toBe(3);
+  });
+
+  it("returns 3 for input string //-\n1-2", () => {
+    expect(stringCalculator("//-\n1-2")).toBe(3);
+  });
+
+  it("returns 3 for input string //*\n1*2", () => {
+    expect(stringCalculator("//*\n1*2")).toBe(3);
+  });
+
+  it("returns 21 for input string //:\n1:2:7:11", () => {
+    expect(stringCalculator("//:\n1:2:7:11")).toBe(21);
+  });
 });
