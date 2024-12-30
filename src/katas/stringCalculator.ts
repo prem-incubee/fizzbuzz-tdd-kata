@@ -5,8 +5,8 @@ export default function stringCalculator(listOfNumbers: string) {
   } else if (stringLength === 1) {
     return Number(listOfNumbers);
   } else {
-    const sum = listOfNumbers
-      .split(",")
+    const commaOrNewLineSeparators = /,|\n/
+    const sum = listOfNumbers.split(commaOrNewLineSeparators)
       .reduce(
         (previousValue: number, currentValue: string) =>
           previousValue + parseInt(currentValue),
