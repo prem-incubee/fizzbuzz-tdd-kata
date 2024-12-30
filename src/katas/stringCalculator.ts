@@ -12,13 +12,20 @@ export default function stringCalculator(listOfNumbers: string) {
       customSeparators = splittedNumberList[0].slice(2);
       listOfNumbers = splittedNumberList[1];
     }
-    const sum = listOfNumbers
+
+    const numberArray = listOfNumbers
       .split(customSeparators)
-      .reduce(
-        (previousValue: number, currentValue: string) =>
-          previousValue + parseInt(currentValue),
-        0
-      );
+      .map((strNum) => Number(strNum));
+
+    const negativeNumbers = numberArray.filter((number) => number < 0);
+    if (negativeNumbers.length > 0) {
+      throw new Error(`negatives not allowed: ${negativeNumbers.join(",")}`);
+    }
+
+    const sum = numberArray.reduce(
+      (previousValue, currentValue) => previousValue + currentValue,
+      0
+    );
 
     return sum;
   }
