@@ -51,7 +51,9 @@ describe("string calculator test suite", () => {
   });
 
   it("throws exception for negative input string 1,-2,-3", () => {
-    expect(() => stringCalculator("1,-2,-3")).toThrow("negatives not allowed: -2,-3");
+    expect(() => stringCalculator("1,-2,-3")).toThrow(
+      "negatives not allowed: -2,-3"
+    );
   });
 
   it("returns 2 for input string 1001,2", () => {
@@ -61,5 +63,14 @@ describe("string calculator test suite", () => {
   it("returns 5 for input string 2001,2,3", () => {
     expect(stringCalculator("2001,2,3")).toBe(5);
   });
+
+  it("returns 6 for input string //[***]\n1***2***3", () => {
+    expect(stringCalculator("//[***]\n1***2***3")).toBe(6);
+  });
+
+  it("returns 6 for input string //[*][%]\n1*2%3", () => {
+    expect(stringCalculator("//[*][%]\n1*2%3")).toBe(6);
+  });
+
   
 });
