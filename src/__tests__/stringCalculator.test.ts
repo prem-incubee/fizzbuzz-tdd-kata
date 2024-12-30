@@ -72,5 +72,8 @@ describe("string calculator test suite", () => {
     expect(stringCalculator("//[*][%]\n1*2%3")).toBe(6);
   });
 
+  it("returns 6 for input string //[foo][bar]\n1foo2bar3", () => {
+    expect(stringCalculator("//[foo][bar]\n1foo2bar3")).toBe(6);
+  });
   
 });
