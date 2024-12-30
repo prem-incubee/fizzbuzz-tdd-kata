@@ -22,10 +22,13 @@ export default function stringCalculator(listOfNumbers: string) {
       throw new Error(`negatives not allowed: ${negativeNumbers.join(",")}`);
     }
 
-    const sum = numberArray.reduce(
-      (previousValue, currentValue) => previousValue + currentValue,
-      0
-    );
+    const sum = numberArray.reduce((previousValue, currentValue) => {
+      if (currentValue > 1000) {
+        return previousValue;
+      } else {
+        return previousValue + currentValue;
+      }
+    }, 0);
 
     return sum;
   }
