@@ -8,4 +8,8 @@ describe("get roman numerals for a given number", () => {
   it("should return IX for 9", () => {
     expect(convertToRomanNumerals(9)).toBe("IX");
   });
+
+  it("should return V for 5", () => {
+    expect(convertToRomanNumerals(5)).toBe("V");
+  });
 });
